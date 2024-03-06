@@ -179,7 +179,7 @@ for index, row in enumerate(ws.iter_rows(min_row=2, values_only=True), 2):
         aba_resultado.cell(row=index, column=4, value="Download Não realizado")
         driver.get("https://www.edponline.com.br/servicos/selecionar-instalacao")
         sleep(5)
-        resultado.save(f'Resultado{datetime.today().month}.xlsx')
+        resultado.save(f'{DIRETORIO_FILES}Resultado{datetime.today().month}.xlsx')
         continue
 
 tempo_final = time()
